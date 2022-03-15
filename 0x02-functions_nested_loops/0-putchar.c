@@ -1,19 +1,19 @@
-#include <stdio.h>
-#include <unistd.h>
+#include "main.h"
 
 /**
-*putchar to print the characters given
-* main putchar
-*char c the charcters given
-* Return: Always 0 (Success)
-*/
-int putchar(char c)
-{
-	write(1, &c, 8);
-        return(0);
-}
+ * main - This program prints the phrase Hello, World
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	putchar("_putchar\n");
+	char ch[] = "_putchar";
+	int i;
+
+	for (i = 0; ch[i] != '\0'; i++)
+	{
+		_putchar(ch[i]);
+	}
+
+	_putchar('\n');
 	return (0);
 }
